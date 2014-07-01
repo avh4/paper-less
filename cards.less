@@ -1,0 +1,67 @@
+// http://www.google.com/design/spec/components/cards.html
+
+@card-border-radius: 2px;
+
+.clearfix{
+  zoom:1;
+  &:before, &:after{ content:""; display:table; }
+  &:after{ clear: both; }
+}
+
+.card {
+  float: left;
+  border-radius: @card-border-radius;
+  background: @grey-100;
+  font-size: 16px;
+  margin: 8px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+  .header {
+    padding: 16px;
+    .clearfix;
+
+    img {
+      float: left;
+      height: 42px;
+      margin-right: 8px;
+    }
+  }
+
+  .title {
+    font-size: 16px;
+    color: black;
+  }
+
+  .subhead {
+    font-size: 16px;
+    color: @grey-600;
+  }
+
+  .rich {
+    position: relative;
+    width: 100%;
+
+    &:first-child {
+      border-radius: @card-border-radius @card-border-radius 0 0;
+    }
+
+    span {
+      position: absolute;
+      bottom: 0;
+      padding: 8px;
+      font-size: 24px;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  p {
+    margin: 16px;
+  }
+
+  .actions {
+    padding-left: 8px;
+  }
+}
