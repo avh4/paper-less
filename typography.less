@@ -35,10 +35,13 @@ body {
   color: fade(black, 87%);
 }
 
-.type-title {
+.type-title(@color: black) {
   font-weight: 500;
   font-size: 20px;
-  color: fade(black, 87%);
+  color: fade(@color, 87%);
+}
+.type-title {
+  .type-title();
 }
 
 .type-subhead {
